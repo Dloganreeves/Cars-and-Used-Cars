@@ -1,4 +1,7 @@
-﻿
+﻿//authors: Logan and Rod
+//task: Pair Programming Lab
+
+
 using Cars_and_used_cars;
 
 Console.WriteLine("Welcome to the GC Car Dealership");
@@ -15,8 +18,7 @@ List<Car> CarList = new List<Car>()
     new Car("Jeep", "4xe", 2024, 80000m),
     new Car("Ford", "Raptor", 2024, 60000m)
 };
-//dubugging
-Car.Remove(0, CarList); 
+
 //takes in user choice
 Car.ListCars(CarList);
 Console.WriteLine("What car would you like? Please enter 1-6.");
@@ -27,6 +29,5 @@ string choice2 = CarList[choice].ToString();
 Console.WriteLine($"{choice2}");
 Car.Remove(choice, CarList);
 
-
-
+Console.WriteLine("------------------------------------------");
 Console.WriteLine("Excellent! Our finance department will be in touch shortly.\r\nHave a great day!\r\n ");

@@ -50,9 +50,19 @@ namespace Cars_and_used_cars
             }
            
         }
-        public static void Remove (int x, List<Car>_carlist)
+        public static void Remove (int x, List<Car> _carlist)
         {
            _carlist.RemoveAt(x);
+
+            Console.WriteLine("------------------------------------------");
+            Console.WriteLine("-----------Remaining Inventory------------");
+            int index = 1;
+            foreach (Car car in _carlist)
+            {
+                Console.WriteLine($"{index}. {car.ToString()}");
+                index++;
+
+            }
         }
     }
 }
