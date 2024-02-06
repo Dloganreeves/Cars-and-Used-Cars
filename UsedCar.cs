@@ -15,7 +15,8 @@ namespace Cars_and_used_cars
             Mileage = _mileage;
         }
 
-        public string ToString()
+        
+        public override string ToString()
         {
             string details = $"{Make} \t\t\t{Model} \t\t\t {Year} \t\t\t ${Price} (Used) \t\t\t{Mileage}";
             return details;

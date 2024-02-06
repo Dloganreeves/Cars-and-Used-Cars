@@ -32,7 +32,7 @@ namespace Cars_and_used_cars
             Price = _price;
         }
         //methods
-        public string ToString()
+        public override string ToString()
         {
             string details = $"{Make} \t\t\t{Model} \t\t\t {Year} \t\t\t ${Price}";
             return details;
@@ -43,21 +43,16 @@ namespace Cars_and_used_cars
 
             int index = 1;
             foreach (Car car in _carList)
-            {
-
-                if (car is UsedCar)
-                {
-                    Console.WriteLine($"{index}. {(car as UsedCar).ToString()}");
-                }
-                else
-                {
-                    Console.WriteLine($"{index}. {car.ToString()}");
-                }
-
+            { 
+                Console.WriteLine($"{index}. {car.ToString()}");
                 index++;
 
             }
-
+           
+        }
+        public static void Remove (int x, List<Car>_carlist)
+        {
+           _carlist.RemoveAt(x);
         }
     }
 }
