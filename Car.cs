@@ -23,7 +23,7 @@ namespace Cars_and_used_cars
             Price = 0;
         }
 
-        //Constrcuter
+        //Constructor
         public Car(string _make, string _model, int _year, decimal _price)
         {
             Make = _make;
@@ -34,8 +34,30 @@ namespace Cars_and_used_cars
         //methods
         public string ToString()
         {
-            string details = $"{Make} \t\t\t{Model} \t\t\t {Year} \t\t\t {Price}";
+            string details = $"{Make} \t\t\t{Model} \t\t\t {Year} \t\t\t ${Price}";
             return details;
+        }
+
+        public static void ListCars(List<Car> _carList)
+        {
+
+            int index = 1;
+            foreach (Car car in _carList)
+            {
+
+                if (car is UsedCar)
+                {
+                    Console.WriteLine($"{index}. {(car as UsedCar).ToString()}");
+                }
+                else
+                {
+                    Console.WriteLine($"{index}. {car.ToString()}");
+                }
+
+                index++;
+
+            }
+
         }
     }
 }
